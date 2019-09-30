@@ -1,7 +1,10 @@
 <?php
 
-class userController{
-    public  function  index(){
-        echo  'hola desde user';
+class userController extends User{
+    public function index(){
+        require_once 'views/layouts/header.php';
+        require_once 'views/user/index.php';
+        require_once 'views/layouts/footer.php';
     }
+
 }

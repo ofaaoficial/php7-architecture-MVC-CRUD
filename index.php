@@ -1,15 +1,13 @@
 <?php
-
 $controller = isset($_GET['controller']) ? $_GET['controller'] : 'index';
 $method = isset($_GET['method']) ? $_GET['method'] : 'index';
 
-spl_autoload_register(function($class){
-    if(file_exists("controllers/{$class}.php")):
-        require_once "controllers/{$class}.php";
-    else:
-        die('Error el archivo existe');
-    endif;
-});
 
-$controller .= 'Controller';
-call_user_func([$controller, $method]);
+
+require_once 'models/Database.php';
+require_once 'models/User.php';
+
+require_once 'controllers/indexController.php';
+require_once 'controllers/userController.php';
+
+call_user_func(array( "{$controller}Controller" , $method ));
