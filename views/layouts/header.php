@@ -10,3 +10,11 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="?controller=index" class="navbar-brand">CMS Ejemplo</a>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="?controller=user">Users</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+

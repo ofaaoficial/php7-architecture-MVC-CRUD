@@ -1,4 +1,4 @@
 
-    <!-- scripts -->
-    </body>
+        </main>
+</body>
 </html>
