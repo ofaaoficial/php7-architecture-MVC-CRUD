@@ -12,7 +12,7 @@ class indexController{
 
     /**
      * Vista principal de los controladores.
-     * Principalmente casi siempre se retorna una vista con una tabla para mostrar todos los registros. (Esto depende de la necesita del cliente)
+     * Principalmente casi siempre se retorna una vista con una tabla para mostrar todos los registros. (Esto depende de la necesidad del cliente)
      */
     public function index(){
         require_once 'views/layouts/header.php';
