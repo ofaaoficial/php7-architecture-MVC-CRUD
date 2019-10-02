@@ -18,7 +18,7 @@ class userController extends User{
     //'Validaciones e interaccion model
     public function store(){
         $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        echo parent::register($_POST) ? 'Registro correcto.' : 'Error en el registro';
+        echo parent::register($_POST) ? header('location: ?controller=user') : 'Error en el registro';
     }
 
     //consultar y luego mostrar la informacion en el formulario
