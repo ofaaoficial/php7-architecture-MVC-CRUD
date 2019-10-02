@@ -206,3 +206,9 @@ p{
         transform: translateY(-5px);
     }
 
+.form-control{
+    border: 1px solid #00000059;
+    border-bottom: 2px solid var(--secondary);
+    padding: 8px 12px;
+    border-radius: 3px
+}
