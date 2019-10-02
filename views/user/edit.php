@@ -1,17 +1,16 @@
-<style>
-    input{
-        border: 1px solid black;
-        margin-bottom: 20px;
-    }
-</style>
-
-<form action="?controller=user&method=update" method="POST">
-    <input type="hidden" name="id" value="<?= $user->id ?>">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" required value="<?= $user->name ?>">
-    <br>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" required value="<?= $user->email ?>">
-    <br>
-    <input type="submit" value="Update">
-</form>
+<section class="container">
+    <h1>Crear usuario</h1>
+    <form action="?controller=user&method=store" method="POST">
+        <section class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required class="form-control" value="<?= $user->name ?>">
+        </section>
+        <section class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required class="form-control" value="<?= $user->email ?>">
+        </section>
+        <section class="form-group">
+            <input type="submit" value="Actualizar" class="btn btn-green">
+        </section>
+    </form>
+</section>

@@ -150,8 +150,19 @@ p{
         transform: translateY(-1px);
         box-shadow: 0 5px 5px #00000014;
     }
+    
+    .btn-green{
+        color: #fff;
+        background-color: var(--green);
+    }
 
     .btn-outline-green{
+        border: 1px solid var(--green);
+        color: var(--green);
+        background: transparent;
+    }
+
+    .btn-outline-green:hover{
         border: 1px solid var(--green);
         color: #fff;
         background: var(--green);
@@ -206,9 +217,35 @@ p{
         transform: translateY(-5px);
     }
 
+/**
+    Forms styles
+ */
+.form-group{
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin: 10px 0;
+}
+
+.form-group label{
+    position: absolute;
+    left: 5px;
+    top: -2px;
+    padding: 0 5px;
+    background: #fff;
+    color: var(--black);
+    font-size: 12px;
+}
+
 .form-control{
     border: 1px solid #00000059;
     border-bottom: 2px solid var(--secondary);
-    padding: 8px 12px;
-    border-radius: 3px
+    padding: 14px 8px;
+    border-radius: 3px;
+    width: 100%;
 }
+
+.form-control:focus{
+    border: 2px solid var(--secondary);
+}
+

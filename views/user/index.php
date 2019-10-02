@@ -1,6 +1,8 @@
 <h1>Lista de usuarios</h1>
 
-<a href="?controller=user&method=create">Crear</a>
+<a href="?controller=user&method=create">
+    <button class="btn btn-green">Crear</button>
+</a>
 <table class="table">
     <thead>
         <th>id</th>
