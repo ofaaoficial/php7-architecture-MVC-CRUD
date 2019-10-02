@@ -6,7 +6,7 @@ class indexController{
      * Función que se ejecuta siempre que se crea un objeto.
      * Se puede usar para la seguridad de un controlador.
      */
-    public function __construct(){    
+    public function __construct(){
 
     }
 
@@ -24,7 +24,7 @@ class indexController{
      * Esta función retorna una vista con un formulario.
      */
     public function create(){
-        
+        echo 'function create';
     }
 
     /**

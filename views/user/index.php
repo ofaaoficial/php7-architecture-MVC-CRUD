@@ -1,5 +1,6 @@
 <h1>Lista de usuarios</h1>
 
+<a href="?controller=user&method=create">Crear</a>
 <table class="table">
     <thead>
         <th>id</th>
@@ -12,7 +13,9 @@
             <td><?= $user->id ?></td>
             <td><?= $user->name ?></td>
             <td width="200" class="table__options">
-                <button class="btn btn-outline-green">Editar</button>
+                <a href="?controller=user&method=edit&id=<?= $user->id ?>">
+                    <button class="btn btn-outline-green">Editar</button>
+                </a>
                 <button class="btn btn-outline-red">Borrar</button>
             </td>
         </tr>
