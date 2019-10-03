@@ -15,6 +15,15 @@
         <ul class="navbar-nav">
             <li><a class="nav-link" href="?controller=user">Users</a></li>
         </ul>
+        <?php if(isset($_SESSION['user'])): ?>
+            <ul>
+                <li><p><?= $_SESSION['user']->name; ?></p></li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="?controller=security&method=logout">Cerrar sesion</a></p></li>
+            </ul>
+        <?php endif; ?>
     </nav>
     <main class="container">
 

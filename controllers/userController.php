@@ -1,6 +1,17 @@
 <?php
 
 class userController extends User{
+    /**
+     * Función que se ejecuta siempre que se crea un objeto.
+     * Se puede usar para la seguridad de un controlador.
+     */
+    public function __construct()
+    {
+        Security::verifyUser();
+//        die('hola');
+    }
+
+
     //Mostrar toda la informacion
     public function index(){                
         require_once 'views/layouts/header.php';
@@ -17,6 +28,15 @@ class userController extends User{
 
     //'Validaciones e interaccion model
     public function store(){
+
+        /**
+         * Subida de archivos basica.
+         */
+//        $url_path = 'assets/imgs/' . $_FILES['file']['name'];
+//        move_uploaded_file($_FILES['file']['tmp_name'], $url_path);
+//        $_POST['url_image'] = $url_path;
+
+
         $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
         echo parent::register($_POST) ? header('location: ?controller=user') : 'Error en el registro';
     }

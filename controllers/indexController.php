@@ -7,7 +7,9 @@ class indexController{
      * Se puede usar para la seguridad de un controlador.
      */
     public function __construct(){
-
+//        $s = new Security();
+//        $e->verifyUser();
+//        Security::verifyUser();
     }
 
     /**
@@ -55,4 +57,10 @@ class indexController{
 
     }
 
+
+    public function login(){
+        require_once 'views/layouts/header.php';
+        require_once 'views/index/login.php';
+        require_once 'views/layouts/footer.php';
+    }
 }

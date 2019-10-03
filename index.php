@@ -1,6 +1,9 @@
 
 <?php
 
+
+session_start();
+
 //$_GET = DATOS ATRAVES DE LA URL.
 //$_POST = ENVIAR DATOS DE MANERA OCULTA.
 //$_REQUEST = ADMINISTRA TODOS LOS TIPOS DE PETICIONES.
@@ -26,13 +29,20 @@ $method = isset($_GET['method']) ? $_GET['method'] : 'index';
  * require_once =
  */
 
-require_once 'models/Database.php';
-require_once 'models/User.php';
+spl_autoload_register(function($class){
+    if(file_exists("controllers/{$class}.php")){
+        require_once "controllers/{$class}.php";
+    }else if(file_exists("models/{$class}.php")){
+        require_once "models/{$class}.php";
+    }else{
+        die('The file no exists.');
+    }
+});
 
-require_once 'controllers/indexController.php';
-require_once 'controllers/userController.php';
+$controller = "{$controller}Controller";
+$controller = new $controller();
 
-call_user_func(["{$controller}Controller", $method]);
+call_user_func([$controller, $method]);
 
 
 
