@@ -82,6 +82,7 @@ body{
 }
 
 .navbar-nav{
+    display: flex;
     margin-left: auto;
 }
 
@@ -247,5 +248,16 @@ p{
 
 .form-control:focus{
     border: 2px solid var(--secondary);
+}
+
+
+/**
+    Style of login
+ */
+.login-form{
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 30px;
+    box-shadow: 0 4px 5px #0000003d;
 }
 

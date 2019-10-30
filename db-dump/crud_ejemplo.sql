@@ -19,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cms_ejemplo`
+-- Base de datos: `crud_ejemplo`
 --
+DROP DATABASE IF EXISTS crud_ejemplo;
+CREATE DATABASE crud_ejemplo;
 
 -- --------------------------------------------------------
 
@@ -40,12 +42,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`) VALUES
-(1, 'test', 'oscar@', '$2y$10$94Z50KnSx2ZB.cAjPH6zNuzy7AP3fjcYgKoWo20whzUvaWXmEbG/y'),
-(2, 'dfadfsadfasEDIT', 'oscar@email.com', '$2y$10$day7wBwH/rViyxNG6QaTl./nkfPwUfdSFrQ96yrSGwIEtDtLQzw/y'),
-(3, 'dfadfsadfasEDIT', 'oscar@email.com', '$2y$10$kQfLm9yHVRZQ5Y7zO0Uvd.4XXnv9UWZvMAWcd00a.cIdgGudHweRC'),
-(4, 'dfadfsadfas', 'DS@DFS.CO', '$2y$10$13HAYHeysjEBTlzh4DK0jOJzdva3RUwwHL/0RUImqbs82WiVHrXnG'),
-(5, '', 'DS@DFS.CO', '$2y$10$2aT3fQtGgAvOxBJz4NQfs.kEvVoYjivqNp0OefPSsoqVbSNd4l1Qq'),
-(6, 'dfadfsadfas', 'oscar@email.com', '$2y$10$PE6cKHlrfYehJgTrvRnF..6hnWGFSAwde77AoWDe6JgGrM10V.9ui');
+(1, 'Oscar Amado', 'oscarfamado@gmail.com', '$2y$10$zemg4ndGL.z5.hQ2S72M4OOHmqPHsDsQBOnVB56DWKJ9Hem.F108u');
 
 --
 -- Índices para tablas volcadas

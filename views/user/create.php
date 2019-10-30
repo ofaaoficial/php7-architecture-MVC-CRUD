@@ -19,6 +19,7 @@
         </section>
         <section class="form-group">
             <input type="submit" value="Registar" class="btn btn-green">
+            <a href="?controller=user" class="btn btn-outline-red ml-2">Volver</a>
         </section>
     </form>
 </section>

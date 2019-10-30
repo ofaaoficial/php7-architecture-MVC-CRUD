@@ -8,7 +8,6 @@ class userController extends User{
     public function __construct()
     {
         Security::verifyUser();
-//        die('hola');
     }
 
 
@@ -28,15 +27,6 @@ class userController extends User{
 
     //'Validaciones e interaccion model
     public function store(){
-
-        /**
-         * Subida de archivos basica.
-         */
-//        $url_path = 'assets/imgs/' . $_FILES['file']['name'];
-//        move_uploaded_file($_FILES['file']['tmp_name'], $url_path);
-//        $_POST['url_image'] = $url_path;
-
-
         $_POST['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
         echo parent::register($_POST) ? header('location: ?controller=user') : 'Error en el registro';
     }
@@ -51,7 +41,12 @@ class userController extends User{
 
     //Validaciones e interaccion model
     public function update(){
-        var_dump(parent::update_register($_POST));
+        $_POST['id'] = $_GET['id'];
+        if(parent::update_register($_POST)){
+            header('location:?controller=user');
+        }else{
+            die('Error al actualizar');
+        }
     }
 
 

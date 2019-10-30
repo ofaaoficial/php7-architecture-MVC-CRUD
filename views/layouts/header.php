@@ -13,17 +13,13 @@
     <nav class="navbar">
         <a href="?controller=index" class="navbar-brand">CMS Ejemplo</a>
         <ul class="navbar-nav">
-            <li><a class="nav-link" href="?controller=user">Users</a></li>
+            <?php if(!empty($_SESSION['user'])): ?>
+                <li><a class="nav-link" href="?controller=user">Usuarios</a></li>
+                <li><a class="nav-link" href="?controller=security&method=logout">Cerrar sesion</a></p></li>
+            <?php else: ?>
+                <li><a class="nav-link" href="?controller=index&method=login">Ingresar</a></li>
+            <?php endif; ?>
         </ul>
-        <?php if(isset($_SESSION['user'])): ?>
-            <ul>
-                <li><p><?= $_SESSION['user']->name; ?></p></li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="?controller=security&method=logout">Cerrar sesion</a></p></li>
-            </ul>
-        <?php endif; ?>
     </nav>
     <main class="container">
 

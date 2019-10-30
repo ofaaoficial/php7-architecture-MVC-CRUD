@@ -4,7 +4,7 @@ class Database{
 
     public function connect(){
         try{
-            return new PDO('mysql:host=localhost;dbname=cms_ejemplo;charset=utf8;',
+            return new PDO('mysql:host=localhost;dbname=crud_ejemplo;charset=utf8;',
                 'root',
                 '',
                 [
