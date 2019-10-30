@@ -71,7 +71,7 @@ definido de trabajo.
 ## 📌 ¿Cómo instalar este software de ejemplo? 
 Hace unos años había creado un CRUD que se encuentra en el este repositorio [PHP-CRUD-MVC-PDO](https://github.com/ofaaoficial/PHP-CRUD-MVC-PDO/) hay puede ver el paso a paso para instalar además un ejemplo más básico de esta arquitectura.
 
-_Un concejo es que revise ese repositorio, además compare los cambio que le he hecho a la arquitectura y así pueda comprender mejor buenas practicas que he implementado._
+_Un concejo es que revise ese repositorio, además compare los cambio que le he hecho a la arquitectura y así pueda comprender mejor, buenas practicas que he implementado._
 
 ## 📐 Trabajo final a aprendices
 
