@@ -111,7 +111,6 @@ Entregables:
 * https://github.com/Andres-talero/CRUD-CMS  
 * https://github.com/yeimy1721/CMS_YeimyTorres_1821630-.git
 * https://github.com/DaladierU16/CMD_Daladier_Uribe_1821630
-* https://github.com/DaladierU16/CMD_Daladier_Uribe_1821630
 
 ## License 🔥
 Copyright © 2019-present [Oscar Amado](https://github.com/ofaaoficial) 🧔
